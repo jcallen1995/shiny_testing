@@ -1,0 +1,70 @@
+---
+title: "My Website"
+author: Jason Allen
+date: "`r Sys.Date()`"
+output:
+  rolldown::scrollama_sidebar:
+    theme: null
+    fig_retina: 1
+    css: style-1.css
+    toc: FALSE
+    toc_float: FALSE
+    includes:
+      before_body: header-1.html
+      after_body: header-2.html
+vignette: >
+  %\VignetteIndexEntry{Scrollama Document with the Sidebar Layout}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{css, echo=FALSE}
+.level1 {
+  min-height: 400px;
+  border: 20px solid;
+  margin-bottom: 4em;
+  padding: 1em 2em 2em;
+  opacity: .5;
+}
+.is-active {
+  opacity: 1;
+  background-color: lightyellow;
+}
+body {
+  margin-bottom: 0vh;
+}
+table {
+  border-collapse: collapse;
+}
+```
+
+
+
+# GIS Work
+
+Examples of my personal GIS work, primarily maps or data tables.
+
+# Sonoma County GIS Internship
+
+Over the course of my time leading up to working as an intern at Sonoma County GIS, there were a number of projects I worked on.
+
+```{r, echo=FALSE}
+knitr::kable(head(mtcars), caption = 'A boring table.')
+```
+
+# CV
+
+You may include any number of plots in a section.
+
+```{r, fig.cap=c('A boring scatterplot.', 'A series of curves.'), fig.dim=c(8, 4)}
+par(mar = c(4, 4, .5, .1))
+plot(cars, pch = 19)
+for (z in 4:1) curve(z/x, 0, 10, add = z < 4, col = z)
+```
+
+# Conclusion
+
+That's it.
+
+
+
